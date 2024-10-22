@@ -1,0 +1,6 @@
+[submodule "backend"]
+	path = backend
+	url = git@github.com:zulfikarmuzakir/e_procurement.git
+[submodule "frontend"]
+	path = frontend
+	url = git@github.com:zulfikarmuzakir/e_procurement_frontend.git
