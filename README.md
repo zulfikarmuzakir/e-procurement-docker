@@ -6,8 +6,8 @@ This project is an E-Procurement System built using a modern tech stack with Doc
 
 The project consists of three main components:
 
-1. Backend API
-2. Frontend Application
+1. Backend API (Golang)
+2. Frontend Application (React)
 3. PostgreSQL Database
 
 ## Prerequisites
@@ -20,8 +20,8 @@ The project consists of three main components:
 1. Clone the repository:
 
    ```
-   git clone <repository-url>
-   cd <project-directory>
+   git clone git@github.com:zulfikarmuzakir/e-procurement-docker.git
+   cd e-procurement
    ```
 
 2. Start the application:
