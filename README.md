@@ -1,63 +1,50 @@
-# E-Procurement System
+# E-Procurement Docker
 
-This project is an E-Procurement System built using a modern tech stack with Docker containerization.
-
-## Project Structure
-
-The project consists of three main components:
-
-1. Backend API (Golang)
-2. Frontend Application (React)
-3. PostgreSQL Database
+This repository contains Docker configuration for the E-Procurement application, combining frontend and backend services.
 
 ## Prerequisites
 
 - Docker
 - Docker Compose
+- Git
 
-## Getting Started
+## Clone and Setup
 
-1. Clone the repository:
+### Method 1: Clone with submodules (Recommended)
+```bash
+git clone --recursive git@github.com:zulfikarmuzakir/e-procurement-docker.git
+cd e-procurement-docker
+```
 
-   ```
-   git clone git@github.com:zulfikarmuzakir/e-procurement-docker.git
-   cd e-procurement
-   ```
+### Method 2: Clone and initialize submodules manually
+```bash
+git clone git@github.com:zulfikarmuzakir/e-procurement-docker.git
+cd e-procurement-docker
+git submodule init
+git submodule update
+```
 
-2. Start the application:
+## Running the Application
 
-   ```
-   docker-compose up -d
-   ```
+1. Build and start the containers:
+```bash
+docker-compose up --build
+```
 
-3. Access the application:
-   - Frontend: http://localhost:3000
-   - Backend API: http://localhost:8080
+2. Access the applications:
+- Frontend: http://localhost:3000
+- Backend API: http://localhost:8080
+- Database: localhost:5433 (local) | postgres:5432 (docker)
 
 ## Services
 
-### PostgreSQL Database
+- Frontend: React application
+- Backend: Go API
+- Database: PostgreSQL
 
-- Port: 5433 (host) -> 5432 (container)
-- User: root
-- Password: password
-- Database: e_procurement
+## Development
 
-### Backend API
-
-- Port: 8080
-- Depends on: PostgreSQL Database
-
-### Frontend
-
-- Port: 3000
-- Depends on: Backend API
-
-
-## Stopping the Application
-
-To stop the application and remove the containers:
-
-```
-docker-compose down
+To update submodules to their latest versions:
+```bash
+git submodule update --remote
 ```
